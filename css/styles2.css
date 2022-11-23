@@ -13,12 +13,12 @@ li>a{
 }
 
 header{
-  /* margin: 0 0 0 20px; */
   background-color: #e1f7eb;
   width:100%;
   display: flex;
   position: fixed; 
   justify-content: space-between;
+  z-index: 1;
 }
 header section{
   background-color: #185c37;
