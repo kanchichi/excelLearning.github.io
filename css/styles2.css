@@ -3,7 +3,7 @@ body{
   background-color: #e1f7eb;
   margin: 0;
 }
-h1,h2,div,p,ul{
+h1,h2,h3,div,p,ul{
 margin: 0;
 }
 li>a{
@@ -12,27 +12,50 @@ li>a{
   font-weight: bold;
 }
 
+
+
+
 header{
-  background-color: #e1f7eb;
+  background-color: #185c37;
   width:100%;
   display: flex;
   position: fixed; 
   justify-content: space-between;
   z-index: 1;
 }
-header section{
-  background-color: #185c37;
-  margin: 20px auto;
+header #title_banner{
   display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center; 
-  width: 95%;
+
+}
+header #title{
+  margin: 16px auto;
+  padding-left: 16px;
+  width: 100%;
+  position: relative;
   
 }
+#pic{
+  position: absolute;
+  top: 0;
+  right:0;
+}
+#menu{
+  width: 100%;
+  height: 16px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom:-16px;
+}
+#menu h3,p{
+  padding: 0 16px;
+  line-height: 24px;;
+}
 
-header h1,header h2{
+
+header h1{
   color: aliceblue;
+  font-size: 18px;
 }
 .content h3::before{
   content:'<';
@@ -50,20 +73,55 @@ header div{
 }
 
 #pic img{
-  /* width:100px; */
   height: 100px;
 }
 main{
-  padding-top: 140px;
+  padding-top: 120px;
+  
+}
+#desc{
+  /* display: none; */
+  opacity:0;
+  visibility: hidden; 
+  position: fixed;
+  top:5%;
+  left:50%;
+  margin: 0 auto;
+  width: 90%;
+  padding:8px;
+  background: #333;
+  color:#fff;
+  border-radius: 8px;;
+  transform:translatex(-50%);
+  transition: opacity .5s;
+  z-index: 1;
+}
+#about:hover{
+  cursor: pointer;
+}
+#desc.appear{
+  opacity:1;
+  visibility: visible; 
 
 }
-main .desc{
-  margin: 0 auto;
-  width:80%;
-  padding:20px;
+#about,#menu_index{
+  background: rgb(7, 132, 182);
+  margin-left: 8px;
+  margin-top: 8px;
+  color:#fff;
+  height: 24px;
+  border-radius: 50%;
+  z-index:1;
+  opacity: .8;
 }
-.desc p{
-  font-size: 18px;
+#menu_index a{
+  color: #fff;
+  text-decoration:none;
+}
+#desc p{
+  font-size: 14px;
+  line-height: 150%;
+  /* padding:4px; */
 }
 .office{
   width:75%;
@@ -137,8 +195,15 @@ footer{
   text-align: center;
   color:#949495;
 }
-@media(min-width:600px) and (max-width:799px)
+@media(min-width:600px)
 {
+  main{
+  padding-top: 160px;
+  
+}
+  header h1{
+    font-size: 2.0em;
+  }
   .articles{
     width:95%;
     margin: 0 auto;
@@ -148,6 +213,9 @@ footer{
   .content{
     width:95%;
   }
+  #desc{
+    width: 540px;;
+  }
 }
 
 @media(min-width:800px){
@@ -156,7 +224,10 @@ footer{
     margin: 0 auto;
   }
   header{
-    width: 800px;
+    width:800px;
+  }
+  #desc{
+    width: 720px;
   }
   .articles{
     width: 95%;

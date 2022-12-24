@@ -17,7 +17,25 @@ h2::before,h2::after{
 header{
   background-color: #bbb;
   color:#444;
+  height:54px;
   text-align: center;
+  position: fixed;
+  width:100%;
+}
+header h1{
+  font-size: 16px;
+}
+header p{
+  margin-top: 8px;
+  font-size: 14px;
+}
+#title_banner{
+  position: relative;
+}
+#back{
+  position:absolute;
+  top:0px;
+  right:8px;
 }
 a{
   color:#c1c4e9;
@@ -28,10 +46,14 @@ a:hover{
 }
 .container{
   margin-left:5px;
-  border:1px solid #444;;
+  border:1px solid #444;
+  padding-top: 80px;
 }
 #contents{
   margin-left:10px;
+}
+.content{
+  margin-bottom: 24px;
 }
 #shortCut{
 
@@ -41,4 +63,27 @@ a:hover{
 }
 #shortCut a{
   color:#223a70;
+}
+footer{
+  text-align: center;
+  margin: 16px auto;
+}
+@media(min-width:600px)
+{
+  
+  .container{
+    padding-top: 80px;
+  }
+}
+
+@media(min-width:800px){
+  body{
+    width: 800px;
+    margin: 0 auto;
+  }
+  header{
+    width:800px;
+  }
+  
+
 }
