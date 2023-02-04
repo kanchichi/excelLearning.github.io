@@ -1,0 +1,22 @@
+@charset "utf-8";
+body{
+  margin: 0;
+  background: #d0e8cf;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+}
+header i{
+  margin-right:16px;
+}
+header h1{
+  flex:1;
+  text-align: center;
+}
+
+
+
+.content{
+  display: flex;
+}
