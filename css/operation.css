@@ -20,3 +20,10 @@ header h1{
 .content{
   display: flex;
 }
+.contentImg{
+  width: 200px;
+  height: 200px;
+}
+.contentImg img{
+  width: 100%;
+}
