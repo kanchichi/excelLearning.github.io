@@ -1,0 +1,167 @@
+@charset "utf-8";
+:root{
+  --headerHeight:120px;
+}
+h1,h2,h3,h4,h5,p,li,img,a{
+    margin: 0;
+    color:#444
+  }
+  
+  body{
+    margin: 0 auto;
+    background-color: rgb(1,48,0);
+  }
+
+  /* ●●●●●●●●　Header　●●●●●●●● */
+  header{
+      position: fixed;
+      width: 100%;
+      top:0;
+      height:var(--headerHeight);
+      background-color: rgb(1,48,0);
+    }
+    .title_banner{
+    display: flex;
+}
+.banner_area_tiitle{
+    display: flex;
+    flex:9;
+    height: var(--headerHeight);
+}
+.banner_area_tiitle img{
+    object-fit:contain;
+    width: 100%;
+}
+  .banner_area_spicon{
+    flex:1;
+    display: flex;
+   align-items: center; 
+   text-align: center;
+   font-size: 200%;
+   text-align: center;
+  }
+
+
+
+/* ●●●●●●●●　Main　●●●●●●●● */
+main{
+margin-top: 150px;
+}
+                    /* xxxxxx後で不要xxxxxx */
+                    main img{
+                        width: 40%;
+                    }
+                    /* xxxxxxxxxxxxxxxxxxxxxxx */
+
+/* ★★★★★★★★★★Articles★★★★★★ */
+article{
+  width: 100%;
+  /* display: flex; */
+}
+.content{
+  margin: 8px;
+ background: rgb(214, 253, 214);
+ border-radius: 5px;
+ /* position: relative; */
+}
+.content_title{
+  display: flex;
+  flex-direction: column;
+  margin: 8px 24px 0;
+  height:96px;
+  white-space:pre-wrap;
+  overflow: hidden;
+}
+  .content h2{
+    display: inline-block;
+    margin: 8x 16px 0; 
+  }
+    .content h2::before{
+      content:'< Lesson';
+    }
+    .content h2::after{
+      content:' >';
+    }
+  .content h3{
+    display: inline-block;
+    margin: 0 16px;
+    overflow: hidden;
+    font-size: 1.2rem;
+  }
+
+.content a{
+  display: flex;
+  width: 60%;
+  margin: 8px 20%;
+  text-decoration: none;
+}
+  .content a img{
+    width: 100%;
+    box-shadow: 5px 5px 5px #444;
+  }
+
+.files{
+  margin: 8px;
+  height: 60px;
+  display: flex;
+  /* width: 100%; */
+  background: #ccc;
+  /* position: absolute; */
+  /* vertical-align: bottom; */
+  /* align-items:center; */
+}
+  .files p{
+    display: inline-block;
+    flex: 1px;
+    margin: 8px;
+    font-size: 12px;
+  }
+  .files .movie::before{
+    content:'動画で使用しているファイルはこちらからダウンロードできます。';
+  }
+  .files button{
+    height:48px;
+    margin: auto 8px;
+    width: 48x;
+    border-radius: 3px;
+    /* background: blue; */
+    /* outline: yellow; */
+    /* color:red; */
+  }
+  .files a{
+    margin: 0 auto;
+  }
+
+  .buttons{
+    display: flex;
+  }
+
+
+  /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼footer▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+  footer{
+    height:36px;
+    text-align: center;
+
+  }
+  footer p{
+    color:#ddd;
+  }
+
+  footer p::after{
+    content:'2023 Hisashi Saito All Rights Reserved';
+  }
+
+  @media(min-width:800px){
+    article{
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+@media(min-width:1200px){
+  /* ▲▲▲▲▲variable▲▲▲▲▲▲▲ */
+  article{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}

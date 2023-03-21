@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* ●●●●●●●●　Header　●●●●●●●● */
+.banner_area_spicon .bi-house{
+    color:yellow;
+    font-size: 4vw;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.page_title{
+    text-align: center;
+    background: rgb(0, 0, 200);
+}
+.page_title h1{
+    color:#fff;
+}
