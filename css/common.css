@@ -19,9 +19,14 @@ h1,h2,h3,h4,h5,p,li,img,a{
       top:0;
       height:var(--headerHeight);
       background-color: rgb(1,48,0);
+      z-index: 1;
     }
     .title_banner{
     display: flex;
+}
+header.scrolled{
+  opacity: 0.2;
+  /* background-color: rgb(189, 218, 189); */
 }
 .banner_area_tiitle{
     display: flex;
@@ -45,13 +50,27 @@ h1,h2,h3,h4,h5,p,li,img,a{
 
 /* ●●●●●●●●　Main　●●●●●●●● */
 main{
-margin-top: 150px;
+margin-top: 180px;
 }
-                    /* xxxxxx後で不要xxxxxx */
-                    main img{
-                        width: 40%;
-                    }
-                    /* xxxxxxxxxxxxxxxxxxxxxxx */
+
+#to_top{
+  position: fixed;
+  bottom:60px;
+  right:60px;
+  font-size: 48px;
+  color:rgb(187, 2, 2);
+  z-index: 1;
+  opacity: 0;
+  transition:opacity 1s,transform 1s;
+  transform:translateY(50px);
+}
+#to_top.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+.caution{
+  color:red;
+}
 
 /* ★★★★★★★★★★Articles★★★★★★ */
 article{
@@ -62,8 +81,18 @@ article{
   margin: 8px;
  background: rgb(214, 253, 214);
  border-radius: 5px;
+ opacity:0;
+  transform:translateY(100px);
+  transition:opacity 1s,transform 1s;
  /* position: relative; */
 }
+
+.content.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
 .content_title{
   display: flex;
   flex-direction: column;
@@ -99,6 +128,8 @@ article{
     width: 100%;
     box-shadow: 5px 5px 5px #444;
   }
+
+
 
 .files{
   margin: 8px;
@@ -141,6 +172,7 @@ article{
   footer{
     height:36px;
     text-align: center;
+    margin-top: 120px;
 
   }
   footer p{
